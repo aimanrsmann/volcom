@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Add Record</title>
+  <style>
+    body {
+        background-color: #111;
+        color: #FFD700;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #FFD700;
+        margin-bottom: 40px;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #222;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="number"],
+    .form-container input[type="double"] {
+        width: 100%;
+        padding: 12px;
+        margin: 12px 0;
+        border: 1px solid #FFD700;
+        background-color: #333;
+        color: #FFD700;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .form-container input[type="text"]:focus,
+    .form-container input[type="number"]:focus,
+    .form-container input[type="double"]:focus {
+        background-color: #444;
+        outline: none;
+        border-color: #FFC300;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #FFD700;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #FFC300;
+    }
+
+    .back-button {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .back-button a {
+        background-color: #444;
+        color: #FFD700;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .back-button a:hover {
+        background-color: #555;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .form-container {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        button, .back-button a {
+            font-size: 14px;
+        }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Add New Record</h1>
+
+<div class="form-container">
+  <form action="/records/add" method="POST">
+    <input type="text" name="title" placeholder="Enter Record Title" required>
+    <input type="text" name="artist" placeholder="Enter Artist Name" required>
+    <input type="text" name="genre" placeholder="Enter Genre" required>
+    <input type="number" name="year" placeholder="Enter Release Year" required>
+    <input type="double" name="price" placeholder="Enter Price ($)" required>
+    <button type="submit">Add Record</button>
+  </form>
+</div>
+
+<!-- Back Button -->
+<div class="back-button">
+  <a href="/records/index">Back to Records</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+body {
+    background-color: #000; /* Black background */
+    color: #FFD700; /* Gold text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #FFD700; /* Gold headers */
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #FFD700; /* Gold border */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333; /* Dark header background */
+}
+
+button, input[type="submit"], input[type="button"] {
+    background-color: #FFD700; /* Gold button */
+    color: #000; /* Black text */
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #FFA500; /* Lighter gold on hover */
+}
+
+form input[type="text"], form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    background-color: #333; /* Dark input background */
+    color: #FFD700; /* Gold text */
+    border: 1px solid #FFD700; /* Gold border */
+}
+
+a {
+    color: #FFD700; /* Gold links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #111; /* Slightly lighter black */
+    border-radius: 10px;
+}

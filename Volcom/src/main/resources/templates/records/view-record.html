@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>View Record</title>
+  <style>
+    body {
+        background-color: #111;
+        color: #FFD700;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #FFD700;
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
+
+    .record-details {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #222;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    }
+
+    .record-details p {
+        font-size: 18px;
+        margin: 15px 0;
+        line-height: 1.6;
+    }
+
+    .record-details strong {
+        font-weight: bold;
+        color: #FFD700;
+    }
+
+    .record-details span {
+        color: #FFFFFF;
+    }
+
+    button, a.button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #FFD700;
+        color: #000;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover, a.button:hover {
+        background-color: #FFC300;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 28px;
+        }
+
+        .record-details {
+            padding: 20px;
+        }
+
+        .record-details p {
+            font-size: 16px;
+        }
+
+        button, a.button {
+            font-size: 14px;
+        }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Record Details</h1>
+
+<div class="record-details">
+  <p><strong>Title:</strong> <span th:text="${record.title}"></span></p>
+  <p><strong>Artist:</strong> <span th:text="${record.artist}"></span></p>
+  <p><strong>Genre:</strong> <span th:text="${record.genre}"></span></p>
+  <p><strong>Year:</strong> <span th:text="${record.year}"></span></p>
+  <p><strong>Price:</strong> <span th:text="${record.price}"></span></p>
+
+  <!-- Back Button -->
+  <a class="button" href="/index">Back to Records</a>
+</div>
+
+</body>
+</html>
